@@ -39,7 +39,7 @@ class ClassBVC: UIViewController {
         navigationController?.dismiss(animated: true)
     }
     
-    func handleTap(_ tapGesture: UITapGestureRecognizer) {
+    @objc func handleTap(_ tapGesture: UITapGestureRecognizer) {
         
         view.backgroundColor = tapGesture.view?.backgroundColor
         //MARK: step 3 Add the delegate method call here
