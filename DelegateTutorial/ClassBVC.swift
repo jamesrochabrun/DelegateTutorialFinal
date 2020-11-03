@@ -9,7 +9,7 @@
 import UIKit
 
 //MARK: step 1 Add Protocol here
-protocol ClassBVCDelegate: class {
+protocol ClassBVCDelegate: AnyObject {
     func changeBackgroundColor(_ color: UIColor?)
 }
 
@@ -27,12 +27,12 @@ class ClassBVC: UIViewController {
         firstView.layer.borderColor = UIColor.white.cgColor
         firstView.layer.borderWidth = 2.0
         firstView.layer.cornerRadius = firstView.frame.width / 2
-        firstView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        firstView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         secondView.backgroundColor = .brown
         secondView.layer.borderColor = UIColor.white.cgColor
         secondView.layer.borderWidth = 2.0
         secondView.layer.cornerRadius = secondView.frame.width / 2
-        secondView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        secondView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
     }
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
